@@ -49,11 +49,11 @@ Ranges can be added together in a single group with additional characters. For e
 You can specify a group by adding a caret as the first character. Therefore, [^a-zA-Z] will match any non-letter character and [^0-9] will match any non-numeric character.
 
 ### Bracket Expressions
-First group is indicating that user should use lowercase and uppercase letter characters, numbers, and the specific characters for a period, underscore, percent sign, plus sign, and minus sign for their email.
+[a-zA-Z0-9._%+-] First group is indicating that user should use lowercase and uppercase letter characters, numbers, and the specific characters for a period, underscore, percent sign, plus sign, and minus sign for their email.
 
-Second group indicates that user should include lowercase and uppercase letter characters, numbers, and the specific characters for a period and minus sign. Eliminating some of the special characters removes all of the legal non-Unicode domain name characters.
+[a-zA-Z0-9.-] Second group indicates that user should include lowercase and uppercase letter characters, numbers, and the specific characters for a period and minus sign. Eliminating some of the special characters removes all of the legal non-Unicode domain name characters.
 
-Third group indicates that user should use lowercase and uppercase letter characters with a two-character requirement to eliminate non-Unicode top-level-domains.
+[a-zA-Z] Third group indicates that user should use lowercase and uppercase letter characters with a two-character requirement to eliminate non-Unicode top-level-domains.
 
 ### Look-ahead and Look-behind
 
